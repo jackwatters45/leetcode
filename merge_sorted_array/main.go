@@ -20,7 +20,7 @@ import "fmt"
 
 // O(n + m)
 
-func merge_sorted_arr(nums1 []int, m int, nums2 []int, n int) {
+func merge(nums1 []int, m int, nums2 []int, n int) {
 	i := m - 1
 	j := n - 1
 	k := m + n - 1
@@ -44,7 +44,7 @@ func main() {
 	nums2 := []int{2, 5, 6}
 	n := 3
 
-	merge_sorted_arr(nums1, m, nums2, n)
+	merge(nums1, m, nums2, n)
 	fmt.Println(nums1)
 	// Output: [1 2 2 3 5 6]
 
@@ -53,7 +53,7 @@ func main() {
 	nums2 = []int{}
 	n = 0
 
-	merge_sorted_arr(nums1, m, nums2, n)
+	merge(nums1, m, nums2, n)
 	fmt.Println(nums1)
 	// Output: [1]
 
@@ -62,7 +62,7 @@ func main() {
 	nums2 = []int{1}
 	n = 1
 
-	merge_sorted_arr(nums1, m, nums2, n)
+	merge(nums1, m, nums2, n)
 	fmt.Println(nums1)
 	// Output: [1]
 }
